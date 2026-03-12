@@ -64,14 +64,14 @@ img {
 .layout {
   display: grid;
   grid-template-columns: 180px 1fr 180px;
-  grid-template-areas: "left main right";
+  grid-template-areas: "left content right";
   gap: 16px;
   padding: 16px;
 }
 
 .ad-left { grid-area: left; }
 .ad-right { grid-area: right; }
-main { grid-area: main; }
+.content { grid-area: content; }
 
 .ad {
   background: var(--yellow);
@@ -194,7 +194,7 @@ footer {
   .layout {
     grid-template-columns: 1fr 160px;
     grid-template-areas:
-      "main right"
+      "content right"
       "left left";
   }
   .ad { position: static; }
@@ -204,7 +204,7 @@ footer {
   .layout {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "main"
+      "content"
       "left"
       "right";
   }
