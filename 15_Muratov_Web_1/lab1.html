@@ -3,165 +3,175 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Вариант 10</title>
+<title>Лаб 1. Вариант 15</title>
 
 <style>
 body{
 margin:0;
 font-family:Arial, sans-serif;
-background:#fff;
-color:#000;
+background-color:#ffffff;
+color:#000000;
 line-height:1.5;
+min-height:100vh;
 }
-
 header{
 padding:20px;
-border-bottom:1px solid #ccc;
 text-align:center;
+border-bottom:1px solid #cccccc;
+background-color:#ffffff;
 }
-
 header h1{
 margin:0;
 font-size:28px;
+letter-spacing:0.5px;
 }
-
 header p{
-margin:5px 0 10px 0;
+margin:6px 0 0 0;
+font-size:14px;
+color:#444444;
 }
-
 nav{
+margin:10px 0 20px 0;
 text-align:center;
-margin-top:10px;
 }
-
 nav ul{
 list-style:none;
 padding:0;
-margin:0 auto;
-display:inline-flex;
-gap:10px;
+margin:0;
+display:flex;
+gap:8px;
+justify-content:center;
+flex-wrap:wrap;
 }
-
 nav a{
 text-decoration:none;
-color:#000;
-border:1px solid #ccc;
-padding:5px 10px;
-border-radius:5px;
+color:#000000;
+border:1px solid #cccccc;
+padding:6px 10px;
+border-radius:6px;
+font-size:14px;
+background-color:#ffffff;
 }
-
 nav a:hover{
-background:#f0f0f0;
+background-color:#f0f0f0;
 }
-
 main{
-padding:20px;
 max-width:900px;
 margin:0 auto;
+padding:20px;
 }
-
 section{
-margin-bottom:40px;
+margin-bottom:36px;
+padding-bottom:20px;
+border-bottom:1px dashed #dddddd;
 }
-
+section:last-of-type{
+border-bottom:none;
+padding-bottom:0;
+}
 h2{
-margin-bottom:15px;
+margin:0 0 12px 0;
 font-size:22px;
 }
-
 article{
-margin-bottom:20px;
-padding:15px;
-border:1px solid #ccc;
-border-radius:10px;
+padding:12px;
+margin-bottom:16px;
+border:1px solid #cccccc;
+border-radius:8px;
+background-color:#fafafa;
 }
-
+article h3{
+margin-top:0;
+margin-bottom:8px;
+font-size:18px;
+}
 figure{
-margin:0 0 10px 0;
+margin:0 0 8px 0;
 }
-
 img{
 width:100%;
-max-width:250px;
+max-width:260px;
 height:auto;
 display:block;
-border:1px solid #ccc;
-border-radius:5px;
+border:1px solid #cccccc;
+border-radius:6px;
 }
-
-video{
-width:100%;
-max-width:500px;
-display:block;
-margin-bottom:10px;
-border:1px solid #ccc;
-border-radius:8px;
-}
-
 figcaption{
 font-size:12px;
-color:#555;
+color:#555555;
+margin-top:4px;
 }
-
 ul{
 padding-left:20px;
+margin-top:6px;
+margin-bottom:6px;
 }
-
 ol{
 padding-left:20px;
+margin-top:6px;
+margin-bottom:6px;
 }
-
 li{
-margin-bottom:5px;
+margin-bottom:4px;
 }
-
+p{
+margin:6px 0;
+}
 blockquote{
-margin:10px 0;
-padding:10px;
-border-left:4px solid #000;
-background:#f2f2f2;
+margin:8px 0;
+padding:8px;
+border-left:4px solid #000000;
+background-color:#f2f2f2;
 }
-
 blockquote p{
 margin:0;
 }
-
 table{
 width:100%;
 border-collapse:collapse;
-margin-top:10px;
-background:#fff;
+margin-top:8px;
+background-color:#ffffff;
 }
-
 caption{
 caption-side:top;
 text-align:left;
-margin-bottom:5px;
+margin-bottom:6px;
 font-size:14px;
 }
-
 th, td{
-border:1px solid #ccc;
+border:1px solid #cccccc;
 padding:8px;
 text-align:left;
-}
-
-th{
-background:#f0f0f0;
-}
-
-aside{
-padding:15px;
-border:1px solid #ccc;
-border-radius:10px;
-margin-top:10px;
-}
-
-footer{
-padding:20px;
-border-top:1px solid #ccc;
 font-size:14px;
+}
+th{
+background-color:#f0f0f0;
+}
+aside{
+padding:12px;
+border:1px solid #cccccc;
+border-radius:8px;
+background-color:#ffffff;
+}
+footer{
+padding:14px 20px;
+border-top:1px solid #cccccc;
 text-align:center;
+font-size:13px;
+color:#444444;
+}
+small{
+color:#666666;
+font-size:12px;
+}
+a{
+color:#000000;
+}
+.content-cover{
+width:100%;
+max-width:220px;
+margin-bottom:6px;
+display:block;
 }
 </style>
 </head>
@@ -169,35 +179,40 @@ text-align:center;
 <body>
 
 <header>
-<h1>Вариант 10</h1>
+<h1>Мураитов Лаб 1. Вариант 15</h1>
 <p>Одностраничный сайт</p>
-<nav>
+</header>
+
+<nav aria-label="Навигация по странице">
 <ul>
 <li><a href="#jokes">Анекдоты</a></li>
 <li><a href="#content">Контент</a></li>
 <li><a href="#quotes">Цитаты</a></li>
-<li><a href="#matches">Матчи</a></li>
+<li><a href="#matches">Матчи РПЛ</a></li>
 </ul>
 </nav>
-</header>
 
 <main>
 
+<section id="game">
+<h2>Мини-игра</h2>
+<p>Запусти игру через кнопку:</p>
+<button onclick="myFunc()">Нажми меня!</button>
+<input type="button" onclick="myFunc()" value="Нажми меня!">
+</section>
+
 <section id="jokes">
-<header>
-<h2>Смешные анекдоты для программистов</h2>
-</header>
+<h2>Смешные анекдоты</h2>
 
 <article>
 <h3>Анекдот 1</h3>
 <figure>
-<img src="assets/joke1.jpg" alt="Анекдот 1">
+<img src="assets/image1.png" alt="Иллюстрация к анекдоту 1">
 <figcaption>Иллюстрация</figcaption>
 </figure>
 <p>
-Жена программиста говорит:<br>
-— Сходи в магазин и купи батон хлеба. Если будут яйца — возьми десять.<br>
-Программист возвращается с десятью батонами.<br>
+— Сходи в магазин и купи хлеб. Если будут яйца — возьми десять.<br>
+Программист вернулся с десятью батонами.<br>
 — Почему так много?<br>
 — Так яйца были.
 </p>
@@ -206,19 +221,7 @@ text-align:center;
 <article>
 <h3>Анекдот 2</h3>
 <figure>
-<img src="assets/joke2.jpg" alt="Анекдот 2">
-<figcaption>Иллюстрация</figcaption>
-</figure>
-<p>
-Программист на пляже тонет и кричит:<br>
-— F1! F1! HELP!
-</p>
-</article>
-
-<article>
-<h3>Анекдот 3</h3>
-<figure>
-<img src="assets/joke3.jpg" alt="Анекдот 3">
+<img src="assets/image2.png" alt="Иллюстрация к анекдоту 2">
 <figcaption>Иллюстрация</figcaption>
 </figure>
 <p>
@@ -227,98 +230,111 @@ text-align:center;
 </p>
 </article>
 
+<article>
+<h3>Анекдот 3</h3>
+<figure>
+<img src="assets/image3.png" alt="Иллюстрация к анекдоту 3">
+<figcaption>Иллюстрация</figcaption>
+</figure>
+<p>
+Программист на пляже тонет и кричит:<br>
+— F1! F1! HELP!
+</p>
+</article>
 </section>
 
 <section id="content">
-<header>
 <h2>Последний употреблённый контент</h2>
-</header>
 
 <article>
-<h3>Видео из папки assets</h3>
-
-<video controls>
-<source src="assets/video.mp4" type="video/mp4">
-Ваш браузер не поддерживает видео.
-</video>
+<h3>Книга: «Маленький принц»</h3>
+<figure>
+<img class="content-cover" src="assets/book.png" alt="Обложка книги Маленький принц">
+<figcaption>Обложка книги</figcaption>
+</figure>
 
 <ul>
-<li>Формат: видео</li>
-<li>Источник: локальный файл</li>
-<li>Тип: развлекательный короткий ролик</li>
+<li>Формат: книга</li>
+<li>Автор: Антуан де Сент-Экзюпери</li>
+<li>Жанр: философская сказка</li>
 </ul>
 
-<p>Это короткое зумерское видео в формате вертикального клипа. Такие ролики рассчитаны на быстрый просмотр и лёгкое развлечение.</p>
+<p>
+Последний раз читал «Маленького принца». Книга короткая, но в ней много смыслов про дружбу,
+ответственность и взрослый взгляд на мир.
+</p>
 </article>
 
 <aside>
 <h3>Мой отзыв</h3>
-<p>Видео динамичное и короткое. Подходит для быстрого просмотра и отдыха. Формат удобный и современный.</p>
-<p><strong>Оценка: 8/10</strong></p>
+<p>Книга добрая и очень понятная. Читается легко, но после чтения остаётся много мыслей.</p>
+<p><strong>Оценка: 9/10</strong></p>
 </aside>
-
 </section>
 
 <section id="quotes">
-<header>
-<h2>Цитаты из видео</h2>
-</header>
-
+<h2>Цитаты из книги</h2>
 <ol>
-<li><blockquote><p>«Это было неожиданно!»</p></blockquote></li>
-<li><blockquote><p>«Вот это поворот!»</p></blockquote></li>
-<li><blockquote><p>«Такого я не ожидал.»</p></blockquote></li>
+<li><blockquote><p>«Мы в ответе за тех, кого приручили.»</p></blockquote></li>
+<li><blockquote><p>«Самого главного глазами не увидишь.»</p></blockquote></li>
+<li><blockquote><p>«Зорко одно лишь сердце.»</p></blockquote></li>
 </ol>
-
 </section>
 
 <section id="matches">
-<header>
-<h2>Матчи команды №11 — ФК «Ростов»</h2>
-</header>
+<h2>Матчи команды №16 — ФК «Сочи» (январь–февраль)</h2>
 
-<table><caption>Матчи январь–февраль</caption>
+<table>
+<caption>Товарищеские матчи и время проведения</caption>
 <thead>
 <tr>
 <th>Дата</th>
 <th>Соперник</th>
-<th>Тип матча</th>
 <th>Время</th>
 <th>Счёт</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>24.01.2026</td>
-<td>Локомотив</td>
-<td>Товарищеский</td>
-<td>15:30</td>
-<td>1:1</td>
+<td>21.01.2026</td>
+<td>Тюмень</td>
+<td>12:00</td>
+<td>2:2</td>
 </tr>
 <tr>
-<td>04.02.2026</td>
-<td>Ноа</td>
-<td>Товарищеский</td>
-<td>16:00</td>
-<td>3:0</td>
+<td>28.01.2026</td>
+<td>Слога (БиГ)</td>
+<td>12:00</td>
+<td>3:3</td>
 </tr>
 <tr>
-<td>07.02.2026</td>
-<td>Циндао</td>
-<td>Товарищеский</td>
+<td>30.01.2026</td>
+<td>Струга (Северная Македония)</td>
 <td>16:00</td>
-<td>2:0</td>
+<td>2:1</td>
+</tr>
+<tr>
+<td>05.02.2026</td>
+<td>Факел</td>
+<td>12:00</td>
+<td>2:2</td>
+</tr>
+<tr>
+<td>12.02.2026</td>
+<td>Динамо Мх</td>
+<td>16:00</td>
+<td>0:3</td>
 </tr>
 </tbody>
 </table>
-
 </section>
 
 </main>
 
 <footer>
-<p>Работа выполнена в одном файле index.html</p>
+<small>Лабораторная работа 1. Вариант 15</small>
 </footer>
 
+<script src="index.js"></script>
 </body>
 </html>

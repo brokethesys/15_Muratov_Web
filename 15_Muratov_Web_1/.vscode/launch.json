@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-msedge",
+      "request": "launch",
+      "name": "Open lab1 (Edge)",
+      "url": "file:///C:/Users/murat/Web/15_Muratov_Web_1/lab1.html",
+      "webRoot": "${workspaceFolder}",
+      "runtimeArgs": [
+        "--remote-debugging-port=9222",
+        "--user-data-dir=${workspaceFolder}\\.vscode\\edge-profile"
+      ]
+    }
+  ]
+}
