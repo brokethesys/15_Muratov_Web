@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+  <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">
+    Тёмная тема
+  </button>
+
   <header class="top">
     <div class="brand">TurboSleep 3000</div>
     <p class="slogan">Засыпай быстрее, чем открывается TikTok!</p>
@@ -58,24 +62,25 @@
 
         <section class="reviews">
           <h2>Отзывы пользователей</h2>
-          <div class="reviews-flex">
-            <article class="review">
-              <h4>Андрей</h4>
-              <p>Я купил эту подушку и… все еще не сплю. Но мне нравится упаковка.</p>
-            </article>
-            <article class="review">
-              <h4>Катя</h4>
-              <p>Она мягкая. Возможно это подушка.</p>
-            </article>
-            <article class="review">
-              <h4>Сергей</h4>
-              <p>Я не знаю что это, но реклама была убедительная.</p>
-            </article>
-            <article class="review">
-              <h4>Валерия</h4>
-              <p>Подушка красивая. Смысла нет, зато настроение есть.</p>
-            </article>
-          </div>
+          <div class="reviews-flex" id="reviewsList"></div>
+
+          <form class="review-form" id="reviewForm">
+            <h3>Добавить отзыв</h3>
+            <label>
+              Имя
+              <input type="text" id="reviewName" placeholder="Ваше имя">
+            </label>
+            <label>
+              Текст
+              <textarea id="reviewText" rows="4" placeholder="Ваш отзыв"></textarea>
+            </label>
+            <label>
+              Ссылка на изображение (необязательно)
+              <input type="url" id="reviewImage" placeholder="https://example.com/photo.jpg">
+            </label>
+            <div class="form-error" id="reviewError"></div>
+            <button type="submit">Отправить</button>
+          </form>
         </section>
 
         <section class="invent">
@@ -101,5 +106,8 @@
   <footer>
     <p>© 2026 TurboSleep Corporation</p>
   </footer>
+
+  <script src="cookie.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
