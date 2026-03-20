@@ -1,0 +1,18 @@
+﻿{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Edge: Open index.html (file)",
+      "type": "pwa-msedge",
+      "request": "launch",
+      "file": "${workspaceFolder}/index.html"
+    },
+    {
+      "name": "Edge: localhost:5500 (Live Server)",
+      "type": "pwa-msedge",
+      "request": "launch",
+      "url": "http://127.0.0.1:5500/index.html",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}
