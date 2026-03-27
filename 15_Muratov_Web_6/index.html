@@ -1,0 +1,143 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторная работа №6 - API</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/app.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <h1 class="header__title">Лабораторная №6: Работа с API</h1>
+      <nav class="nav" aria-label="Навигация по API">
+        <button class="nav__button is-active" data-target="posts">JSONPlaceholder</button>
+        <button class="nav__button" data-target="products">DummyJSON</button>
+        <button class="nav__button" data-target="countries">REST Countries</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <section class="api-section is-active" id="posts" aria-labelledby="posts-title">
+          <h2 id="posts-title">API 1: JSONPlaceholder (GET, POST, PATCH, DELETE)</h2>
+          <p class="api-section__description">
+            В этом блоке реализованы все основные HTTP-методы на ресурсе постов.
+          </p>
+
+          <div class="panel-grid">
+            <article class="panel">
+              <h3>GET: список постов</h3>
+              <button class="btn" id="load-posts">Загрузить посты</button>
+              <div class="status" id="posts-get-status">Нажмите кнопку для загрузки данных.</div>
+              <div class="cards" id="posts-list"></div>
+            </article>
+
+            <article class="panel">
+              <h3>POST: создать пост</h3>
+              <form id="create-post-form" class="form">
+                <label>
+                  Заголовок
+                  <input type="text" name="title" required minlength="3" maxlength="100">
+                </label>
+                <label>
+                  Текст
+                  <textarea name="body" required minlength="5" maxlength="300"></textarea>
+                </label>
+                <button class="btn" type="submit">Создать</button>
+              </form>
+              <div class="status" id="post-create-status">Заполните форму и отправьте POST-запрос.</div>
+              <pre class="code" id="post-create-result"></pre>
+            </article>
+
+            <article class="panel">
+              <h3>PATCH: обновить заголовок</h3>
+              <form id="patch-post-form" class="form">
+                <label>
+                  ID поста
+                  <input type="number" name="id" min="1" required>
+                </label>
+                <label>
+                  Новый заголовок
+                  <input type="text" name="title" required minlength="3" maxlength="100">
+                </label>
+                <button class="btn" type="submit">Обновить</button>
+              </form>
+              <div class="status" id="post-patch-status">Введите ID и новый заголовок.</div>
+              <pre class="code" id="post-patch-result"></pre>
+            </article>
+
+            <article class="panel">
+              <h3>DELETE: удалить пост</h3>
+              <form id="delete-post-form" class="form form--inline">
+                <label>
+                  ID поста
+                  <input type="number" name="id" min="1" required>
+                </label>
+                <button class="btn btn--danger" type="submit">Удалить</button>
+              </form>
+              <div class="status" id="post-delete-status">Введите ID поста для удаления.</div>
+              <pre class="code" id="post-delete-result"></pre>
+            </article>
+          </div>
+    </section>
+
+    <section class="api-section" id="products" aria-labelledby="products-title">
+          <h2 id="products-title">API 2: DummyJSON (GET)</h2>
+          <p class="api-section__description">
+            Поиск и получение списка товаров из DummyJSON.
+          </p>
+
+          <article class="panel">
+            <form id="products-search-form" class="form form--inline">
+              <label>
+                Поиск по названию
+                <input type="text" name="query" placeholder="например: phone">
+              </label>
+              <button class="btn" type="submit">Найти</button>
+              <button class="btn btn--ghost" type="button" id="products-default">Показать все</button>
+            </form>
+            <div class="status" id="products-status">Введите запрос или нажмите «Показать все».</div>
+            <div class="cards cards--products" id="products-list"></div>
+          </article>
+    </section>
+
+    <section class="api-section" id="countries" aria-labelledby="countries-title">
+          <h2 id="countries-title">API 3: REST Countries (GET)</h2>
+          <p class="api-section__description">
+            Загрузка стран по региону или по названию.
+          </p>
+
+          <article class="panel">
+            <form id="countries-form" class="form form--inline">
+              <label>
+                Регион
+                <select name="region">
+                  <option value="all">Все</option>
+                  <option value="europe">Европа</option>
+                  <option value="asia">Азия</option>
+                  <option value="africa">Африка</option>
+                  <option value="americas">Америка</option>
+                  <option value="oceania">Океания</option>
+                </select>
+              </label>
+              <label>
+                Название (необязательно)
+                <input type="text" name="name" placeholder="например: russia">
+              </label>
+              <button class="btn" type="submit">Загрузить</button>
+            </form>
+            <div class="status" id="countries-status">Выберите регион и загрузите данные.</div>
+            <div class="cards cards--countries" id="countries-list"></div>
+          </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      Лабораторная работа №6 по веб-программированию
+    </div>
+  </footer>
+</body>
+</html>
